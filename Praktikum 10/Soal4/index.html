@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="Fabio 2172014" />
+    <title>Soal4</title>
+  </head>
+  <style>
+    div {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: red;
+      transition: 0, 1s;
+      position: absolute;
+    }
+  </style>
+  <body>
+    <div id="bulet"></div>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        let a = document.querySelector("#bulet");
+        let x = e.offsetX;
+        let y = e.offsetY;
+        bulet.style.left = x + "px";
+        bulet.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

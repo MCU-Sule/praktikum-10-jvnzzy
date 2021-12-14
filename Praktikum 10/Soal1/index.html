@@ -1,0 +1,144 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="Fabio 2172014" />
+    <title>Soal1</title>
+  </head>
+  <style>
+    #penj {
+      background-color: orange;
+      margin-bottom: 5px;
+      height: 40px;
+      font-size: 35px;
+    }
+    #peng {
+      background-color: aqua;
+      margin-bottom: 5px;
+      height: 40px;
+      font-size: 35px;
+      margin-top: 5px;
+    }
+    #perk {
+      background-color: deeppink;
+      margin-bottom: 5px;
+      height: 40px;
+      font-size: 35px;
+      margin-top: 5px;
+    }
+    #bil {
+      background-color: darkorange;
+      margin-bottom: 5px;
+      height: 40px;
+      font-size: 35px;
+      margin-top: 5px;
+    }
+    #htg {
+      background-color: cadetblue;
+    }
+    #rnd {
+      background-color: greenyellow;
+    }
+  </style>
+  <body>
+    <div id="penj"><b>Penjumlahan</b></div>
+    <input type="text" readonly id="rnd1" /> +
+    <input type="text" readonly id="rnd2" /> =
+    <input type="text" id="hs" />
+    <button type="button" id="htg" onclick="htgp()">Hitung</button> <br />
+    <button type="button" id="rnd" onclick="Penjumlahan()">Random</button>
+    <div id="hasl"></div>
+
+    <div id="peng"><b>Pengurangan</b></div>
+    <input type="text" readonly id="rnd3" /> -
+    <input type="text" readonly id="rnd4" /> =
+    <input type="text" id="hs2" />
+    <button type="button" id="htgpj" onclick="htgpj()">Hitung</button> <br />
+    <button type="button" id="rnd" onclick="pengurangan()">Random</button>
+    <div id="hasl2"></div>
+
+    <div id="perk"><b>Perkalian</b></div>
+    <input type="text" readonly id="rnd5" /> *
+    <input type="text" readonly id="rnd6" /> =
+    <input type="text" id="hs3" />
+    <button type="button" id="htgpk" onclick="htgpk()">Hitung</button> <br />
+    <button type="button" id="rnd" onclick="perkalian()">Random</button>
+    <div id="hasl3"></div>
+
+    <div id="bil"><b>Bilangan</b></div>
+    <input type="text" readonly id="rnd7" /> = <input type="text" id="rnd8" /> ,
+    <input type="text" id="rnd9" /> ,
+    <input type="text" id="rnd10" />
+    <button type="button" id="htg" onclick="htgb()">Hitung</button> <br />
+    <button type="button" id="rnd" onclick="bilangan()">Random</button>
+    <div id="hasl4"></div>
+    <script>
+      function Penjumlahan() {
+        let a = document.querySelector("#rnd1");
+        a.value = Math.floor(Math.random() * (999 - 100)) + 100;
+
+        let b = document.querySelector("#rnd2");
+        b.value = Math.floor(Math.random() * (999 - 100)) + 100;
+      }
+      function htgp() {
+        let a = parseInt(document.querySelector("#rnd1").value);
+        let b = parseInt(document.querySelector("#rnd2").value);
+        let c = document.querySelector("#hs").value;
+        if (a + b == c) {
+          document.querySelector("#hasl").innerHTML = "Jawaban Benar";
+        } else {
+          document.querySelector("#hasl").innerHTML = "Jawaban Salah";
+        }
+      }
+      function pengurangan() {
+        let a = document.querySelector("#rnd3");
+        a.value = Math.floor(Math.random() * (999 - 100)) + 100;
+
+        let b = document.querySelector("#rnd4");
+        b.value = Math.floor(Math.random() * (999 - 100)) + 100;
+      }
+      function htgpj() {
+        let a = parseInt(document.querySelector("#rnd3").value);
+        let b = parseInt(document.querySelector("#rnd4").value);
+        let c = document.querySelector("#hs2").value;
+        if (a - b == c) {
+          document.querySelector("#hasl2").innerHTML = "Jawaban Benar";
+        } else {
+          document.querySelector("#hasl2").innerHTML = "Jawaban Salah";
+        }
+      }
+      function perkalian() {
+        let a = document.querySelector("#rnd5");
+        a.value = Math.floor(Math.random() * (99 - 1)) + 1;
+
+        let b = document.querySelector("#rnd6");
+        b.value = Math.floor(Math.random() * (99 - 1)) + 1;
+      }
+      function htgpk() {
+        let a = parseInt(document.querySelector("#rnd5").value);
+        let b = parseInt(document.querySelector("#rnd6").value);
+        let c = document.querySelector("#hs3").value;
+        if (a * b == c) {
+          document.querySelector("#hasl3").innerHTML = "Jawaban Benar";
+        } else {
+          document.querySelector("#hasl3").innerHTML = "Jawaban Salah";
+        }
+      }
+      function bilangan() {
+        let a = document.querySelector("#rnd7");
+        a.value = Math.floor(Math.random() * (999 - 100)) + 100;
+      }
+      function htgb() {
+        let q = document.querySelector("#rnd7").value;
+        let a = document.querySelector("#rnd8").value;
+        let b = document.querySelector("#rnd9").value;
+        let c = document.querySelector("#rnd9").value;
+        if (q == a + b + c) {
+          document.querySelector("#hasl4").innerHTML = "Jawaban Benar";
+        } else {
+          document.querySelector("#hasl4").innerHTML = "Jawaban Salah";
+        }
+      }
+    </script>
+  </body>
+</html>
